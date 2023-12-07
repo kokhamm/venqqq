@@ -1,0 +1,43 @@
+.last-cta{
+    &__container{
+        padding: 5rem 0;
+    }
+    &__wrap{
+        background: url('../assets/images/vn-dh-last-cta-bg.webp') no-repeat right;
+        background-size: contain;
+        padding: 20rem 0;
+    }
+    &__header{
+        max-width: 62rem;
+        margin-bottom: 2.4rem;
+    }
+    &__subtext{
+        max-width: 47.8rem;
+        margin-bottom: 4.8rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .last-cta{
+        background: url('../assets/images/vn-mh-last-cta-bg.webp') no-repeat right;
+        background-size: contain;
+        &__container{
+            padding: 0 2rem;
+        }
+        &__wrap{
+            background: none;
+            padding: 7rem 0;
+        }
+        &__subtext{
+            text-align: center;
+            margin-bottom: 10rem;
+        }
+        .hero__buttons{
+            a{
+                padding: 8px 25px;
+            }
+            flex-direction: row;
+            justify-content: center;
+        } 
+    }
+}

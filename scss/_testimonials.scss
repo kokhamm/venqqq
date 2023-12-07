@@ -1,0 +1,84 @@
+@import 'colors';
+
+.testimonials{
+    &__wrap{
+        align-items: center;
+    }
+    &__upheader{
+        margin-bottom: 3.2rem;
+    }
+    &__header{
+        margin-bottom: 2.4rem;
+        max-width: 80rem;
+        text-align: center;
+    }
+    &__subtext{
+        margin-bottom: 10.4rem;
+    }
+    &__slider{
+        width: 100%;
+    }
+    .mySwiperOne{
+        padding-bottom: 7rem;
+        .swiper-slide{
+            background-color: $green-10;
+            border-radius: 3.2rem;
+            padding: 3.2rem;
+            height: 44.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            svg{
+                margin-bottom: 1.6rem;
+            }
+            &-text{
+                font-size: 16px;
+                margin-bottom: 3.2rem;
+            }
+            &-bottom{
+                display: flex;
+                gap: 1.6rem;
+                align-items: center;
+            }
+            &-author{
+                max-width: 6.4rem;
+                &-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .4rem;
+                }
+                &-name{
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                &-position{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .swiper-pagination-bullet-active{
+            background: $green;
+        }
+        .swiper-pagination-bullet{
+            border: 1px solid $green;
+            width: 1.3rem;
+            height: 1.3rem;
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .testimonials{
+        &__subtext{
+            text-align: center;
+            margin-bottom: 5.6rem;
+        }
+        .mySwiperOne{
+            .swiper-slide{
+                height: auto;
+            }
+        }
+    }
+}

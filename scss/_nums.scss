@@ -1,0 +1,152 @@
+@import 'colors';
+
+.nums{
+    &__wrap{
+        flex-direction: row;
+        align-items: center;
+        gap: 3.2rem;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        max-width: 59.2rem;
+        flex: 1;
+    }
+    &__upheader{
+        text-align: left;
+        margin-bottom: 3.2rem;
+    }
+    &__header{
+        margin-bottom: 2.4rem;
+    }
+    &__right{
+        width: 100%;
+        flex: 1;
+    }
+    &__graf{
+        display: flex;
+        background: url('../assets/images/vn-dh-nums-graf.webp') no-repeat center;
+        background-size: contain;
+        width: 100%;
+        max-width: 59.2rem;
+        height: 54rem;
+        align-items: flex-end;
+        margin-bottom: 1.2rem;
+        padding-left: 14.5rem;
+        padding-bottom: 3.4rem;
+    }
+    &__cols{
+        display: flex;
+        gap: 3.3rem;
+    }
+    &__subcore{
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.13px;
+        text-transform: uppercase;
+    }
+    &__col-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        justify-content: flex-end;
+    }
+    &__core{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .6rem;
+    }
+    &__col{
+        width: 8rem;
+        &-one{
+            height: 13.2rem;
+            background: #24706C;
+        }
+        &-two{
+            height: 22.8rem;
+            background: #1A9892;
+        }
+        &-three{
+            height: 36.2rem;
+            background: #0CC7BC;
+        }
+    }
+    &__digit{
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.18px;
+        text-transform: uppercase;
+    }
+    &__sub{
+        color: $white-darker;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width:1100px) {
+    .nums{
+        &__wrap{
+            flex-direction: column;
+            gap: 5.6rem;
+        }
+        &__upheader{
+            text-align: center;
+        }
+        &__subheader{
+            text-align: center;
+        }
+        &__graf{
+            width: 100%;
+            max-width: 35rem;
+            height: 32.4rem;
+            padding-left: 7.3rem;
+            padding-bottom: 1.9rem;
+        }
+        &__core{
+            gap: 0.3rem;
+        }
+        &__cols{
+            gap: 2rem;
+        }
+        &__col{
+            width: 4.7rem;
+            &-one{
+                height: 7.8rem;
+            }
+            &-two{
+                height: 13.5rem;
+            }
+            &-three{
+                height: 21.4rem;
+            }
+        }
+        &__subcore{
+            font-size: 9px;
+            font-weight: 500;
+            line-height: 11px;
+            letter-spacing: 0.09px;
+        }
+        &__col-wrap{
+            gap: 0.7rem;
+        }
+        &__digit{
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 14.189px;
+            letter-spacing: 0.106px;
+            text-transform: uppercase;
+        }
+        &__right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import 'colors';
+
+.cta{
+    background: url('../assets/images/vn-dh-cta-bg.webp') no-repeat center;
+    background-size: cover;
+    &__wrap{
+        padding: 20rem 0;
+        align-items: center;
+    }
+    &__header{
+        max-width: 79.4rem;
+        margin-bottom: 2.4rem;
+        text-align: center;
+    }
+    &__subheader{
+        margin-bottom: 4.8rem;
+        text-align: center;
+        max-width: 57.8rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .cta{
+        &__wrap{
+            padding: 7rem 0;
+        }
+        &__subheader{
+            color: $white;
+        }
+        .hero__buttons{
+            flex-direction: row;
+            justify-content: center;
+            a{
+                padding: 8px 25px;
+            }
+        }
+    }
+}

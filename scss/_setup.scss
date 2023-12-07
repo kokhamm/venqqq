@@ -1,0 +1,137 @@
+@import 'colors';
+
+.setup{
+    &__wrap{
+        align-items: center;
+    }
+    &__upheader{
+        margin-bottom: 3.2rem;
+    }
+    &__header{
+        text-align: center;
+        margin-bottom: 10.4rem;
+        max-width: 61.9rem;
+    }
+    &__body{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__right{
+        img{
+            max-width: 59.2rem;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8.8rem 0;
+        min-width: 59.2rem;
+    }
+    &__item{
+        display: flex;
+        gap: 2rem;
+        max-width: 47.2rem;
+        transition: 0.5s;
+    }
+    &__num{
+        transition: 0.5s;
+        color: $gray;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        padding: 0.8rem 1.1rem;
+        background: $green-10;
+        border-radius: 3.2rem;
+        height: fit-content;
+    }
+    &__text{
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        &-header{
+            transition: 0.5s;
+            color: $gray;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 32px;
+        }
+        &-subheader{
+            transition: 0.5s;
+            color: $gray;
+            font-size: 16px;
+        }
+    }
+    &__item.setup__item-active{
+        gap: 3.2rem;
+        max-width: 100%;
+        .setup__text-header{
+            color: $white;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+        .setup__text-subheader{
+            color: $white-darker;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        .setup__num{
+            padding: 1.6rem 1.75rem;
+            color: $gray-darker;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 32px;
+            background: radial-gradient(3256.32% 106.64% at 100% 0%, #19C5FB 0%, #0CC7BC 100%);
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .setup{
+        &__header{
+            margin-bottom: 5.6rem;
+        }
+        &__left{
+            gap: 4.8rem;
+            min-width: initial;
+            padding: 0;
+        }
+        &__num{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            padding: 0.8rem 0.7rem;
+        }
+        &__text-subheader{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        &__text-header{
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        &__item.setup__item-active{
+            .setup__num{
+                padding: 0.8rem 0.9rem;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+            .setup__text-header{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28px;
+            }
+            .setup__text-subheader{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    }
+}

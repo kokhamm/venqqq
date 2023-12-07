@@ -1,0 +1,164 @@
+@import 'colors';
+
+.features{
+    position: relative;
+    &__test{
+        position: absolute;
+        left: 0;
+        top: -10rem;
+        z-index: -1;
+        width: 100%;
+        filter: blur(1rem);
+    }
+    &__wrap{
+        align-items: center;
+    }
+    &__upheader{
+        margin-bottom: 2.4rem;
+    }
+    &__header{
+        text-align: center;
+        margin-bottom: 10.4rem;
+        max-width: 72.7rem;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18rem;
+        width: 100%;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        &:nth-child(2){
+            .features__gradient {
+                animation-delay: 1s;
+            }
+        }
+        &:nth-child(3){
+            .features__gradient {
+                animation-delay: 2s;
+            }
+        }
+    }
+    &__aside{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        justify-content: center;
+        max-width: 38.4rem;
+        &-header{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+        &-subtext{
+            font-size: 16px;
+            color: $white-darker;
+        }
+    }
+    &__bside{
+        position: relative;
+        padding: 0.1rem;
+        background-color: $gray;
+        border-radius: 1.6rem;
+        z-index: 0;
+        display: flex;
+        overflow: hidden;
+    }
+    &__more{
+        margin-top: 12rem;
+    }
+    &__gradient{
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        transform: translateX(-50%);
+        background: radial-gradient(3074.28% 100.68% at 50% 0%, #19C5FB 0%, rgba(17, 198, 211, 0.52) 45.78%, rgba(12, 199, 188, 0.00) 100%);
+        z-index: -1;
+        animation: gradiCircle 25s linear infinite;
+    }
+    @keyframes gradiCircle {
+        0%{
+            transform: translate(-50%);
+        }
+        10%{
+            transform: translate(-50%, -22rem) rotate(45deg);
+        }
+        25%{
+            transform:translate(150%, -26rem) rotate(90deg);
+        }
+        43%{
+            transform: translate(383%, -25rem) rotate(135deg);
+        }
+        50%{
+            transform: translate(415%, -8rem) rotate(180deg);
+        }
+        57%{
+            transform: translate(409%, 6rem) rotate(225deg);
+        }
+        75%{
+            transform: translate(224%, 10rem) rotate(270deg);
+        }
+        93%{
+            transform: translate(-31%, 10rem) rotate(315deg);
+        }
+        100%{
+            transform: translate(-50%, 0rem) rotate(360deg);
+        }
+    }
+    &__gif{
+        max-width: 69.6rem;
+        z-index: 10;
+        border-radius: 1.5rem;
+    }
+    &__vector{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(10rem);
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1100px) {
+    .features{
+        &__header{
+            margin-bottom: 6rem;
+        }
+        &__body{
+            gap: 4.8rem;
+        }
+        &__item{
+            flex-direction: column !important;
+            align-items: center;
+            gap: 2.4rem;
+        }
+        &__gif{
+            max-width: 100%;
+        }
+        &__bside{
+            padding: 0;
+        }
+        &__aside{
+            gap: 2rem;
+        }
+        &__aside-header{
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        &__more{
+            margin-top: 4.8rem;
+        }
+    }
+}

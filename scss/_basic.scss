@@ -1,0 +1,186 @@
+@import 'colors';
+
+// Basic scripts
+
+::after,
+::before{
+    pointer-events: none;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $white;
+    background-color: $black;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select,
+a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.stopper{
+    overflow: hidden;
+}
+
+html{
+    font-size: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.mob{
+    display: none !important;
+}
+
+[class*="__container"]{
+    max-width: 1215px;
+    margin: 0 auto;
+}
+
+[class*="__wrap"]{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 10rem 0rem;
+}
+
+.green-gradi-special{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.green-gradi-item{
+    color: $green;
+}
+
+.green-gradi{
+    background: radial-gradient(1627.18% 53.29% at 82.37% 27.5%, #19C5FB 0%, #0CC7BC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.green-gradi-light{
+    background: linear-gradient(90deg, rgba(12, 199, 188, 0.18) 0%, rgba(12, 199, 188, 0.00) 100%);
+}
+
+.red-gradi-light{
+    color: linear-gradient(90deg, rgba(199, 12, 12, 0.18) 0%, rgba(199, 12, 12, 0.00) 100%);
+}
+
+.upheader{
+    color: $gray-darker;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.header-h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+.header-h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.subtext{
+    color: $white-darker;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@media (max-width:1200px) {
+    .header-h1{
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.64px;
+    }
+    .upheader{
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 1.7px;
+    }
+    .header-h2{
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.56px;
+        text-align: center;
+    }
+    .subtext{
+        font-size: 16px;
+        line-height: 24px; 
+    }
+    .mob{
+        display: initial !important;
+    }
+
+    .desk{
+        display: none !important;
+    }
+
+    [class*="__container"]{
+        max-width: initial;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    [class*="__wrap"]{
+        padding: 6rem 0rem;
+    }
+    ::after,
+    ::before{
+        max-width: 100vw;
+    }
+    .upheader{
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 1.7px;
+    }
+    .header-h1{
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.64px;
+    }
+    .header-h2{
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.56px;
+    }
+    .subtext{
+        font-size: 16px;
+    }
+}
